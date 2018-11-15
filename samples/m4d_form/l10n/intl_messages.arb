@@ -1,0 +1,38 @@
+{
+   "@@last_modified": "2018-11-15T12:04:13.666627",
+   "Timeframe": "Timeframe",
+   "@Timeframe": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "Begin:": "Begin:",
+   "@Begin:": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "End:": "End:",
+   "@End:": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "Form checks if \"Begin\" is before \"End\"": "Form checks if \"Begin\" is before \"End\"",
+   "@Form checks if \"Begin\" is before \"End\"": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "Clear": "Clear",
+   "@Clear": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "Cancel": "Cancel",
+   "@Cancel": {
+      "type": "text",
+      "placeholders": {}
+   },
+   "OK": "OK",
+   "@OK": {
+      "type": "text",
+      "placeholders": {}
+   }
+}
