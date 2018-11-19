@@ -117,30 +117,11 @@ class TimeFrameDialog extends MaterialDialog {
     Future _init(final String dialogID) async {
         _logger.info("F $_form");
         _form.isFormValidCallback = _isFormValid;
-        //_bindObservable();
     }
 
     List<ObservableProperty> get _allFields => <ObservableProperty> [
         fromDate, fromTime, toDate, toTime
     ];
-
-    void _bindObservable() {
-        _allFields.forEach((final ObservableProperty property) {
-            property
-                ..onReset(() => null)
-
-                // Wenn der property-value von einem String in ein Datum
-                // konvertiert werden soll (InputFeld -> Datum)
-                //
-                // Der _TextFieldObserver (ModelObserver.dart) setzt den textfield.value
-                // Der ModelObserver verwendet dazu "ObservableProperty#toString" #toString
-                // verwendet seinerseits den Formatter (aus ObservableProperty)
-                // this#_dateFormatter und this#_timeFormatter
-                // Diese Formatter ändern null values zu leeren Strings
-                ..onStaticCast(_toDateTime)
-            ;
-        });
-    }
 
     /// Konvertiert den String des Input-Feldes in ein Datum oder eine Zeit
     DateTime _toDateTime(final value) {
@@ -220,7 +201,7 @@ class TimeFrameDialog extends MaterialDialog {
 
     void _onClear(final dom.Event event) {
         event.preventDefault();
-        _allFields.forEach((final ObservableProperty property) => property..reset()..update());
+        _allFields.forEach((final ObservableProperty property) => property.value = null);
         _form.update();
     }
 
@@ -261,6 +242,7 @@ class TimeFrameDialog extends MaterialDialog {
         });
     }
 
+    // You have to enter the time by hand
     void _onEndTime(final dom.Event event) {
         event.preventDefault();
 

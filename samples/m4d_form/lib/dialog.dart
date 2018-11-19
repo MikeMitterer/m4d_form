@@ -7,7 +7,6 @@ import 'package:intl/intl.dart';
 import 'package:logging/logging.dart';
 
 import 'package:m4d_core/m4d_ioc.dart' as ioc;
-import 'package:m4d_core/services.dart' as coreService;
 import "package:m4d_components/m4d_components.dart";
 
 import 'package:m4d_dialog/m4d_dialog.dart';
