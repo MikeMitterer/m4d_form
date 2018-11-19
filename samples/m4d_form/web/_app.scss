@@ -16,6 +16,9 @@ h2 {
     margin-bottom: 0.66em;
 }
 
+.mdl-layout__container {
+    position: initial;
+}
 
 .ribbon {
   width: 100%;
@@ -50,6 +53,7 @@ h2 {
 .mdl-mini-footer {
     padding-top: 12px;
     padding-bottom: 12px;
+	font-size: 12px;
 }
 
 #view-source {
