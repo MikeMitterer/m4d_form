@@ -90,8 +90,7 @@ class TimeFrameDialog extends MaterialDialog {
     // - private ----------------------------------------------------------------------------------
     MaterialFormComponent get _form => MaterialFormComponent.widget(query(".mdl-form"));
 
-    static String _dateFormatter(dynamic date, final baseValue) {
-        final format = "dd.MM.yyyy";
+    static String _dateFormatter(dynamic date, final baseValue,{final String format = "dd.MM.yyyy" }) {
         if(date is String) {
             try {
                 date = DateTime.parse(date);
@@ -102,8 +101,7 @@ class TimeFrameDialog extends MaterialDialog {
         return date != null ? new DateFormat(format).format(date as DateTime) : (baseValue?.toString() ?? "");
     }
 
-    static String _timeFormatter(dynamic date, final baseValue) {
-        final format = "HH:mm";
+    static String _timeFormatter(dynamic date, final baseValue,{final String format = "HH:mm" }) {
         if(date is String) {
             try {
                 date = DateTime.parse(date);
