@@ -83,7 +83,7 @@ class MaterialFormComponent extends MdlComponent {
 
     StreamController<FormChangedEvent> _onChange;
 
-    MaterialFormComponent.fromElement(final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+    MaterialFormComponent.fromElement(final dom.HtmlElement element,final ioc.Container iocContainer)
         : super(element,iocContainer) {
         
         _init();
@@ -257,7 +257,7 @@ class MaterialFormComponent extends MdlComponent {
 void registerMaterialFormComponent() {
     final MdlConfig config = new MdlWidgetConfig<MaterialFormComponent>(
         _MaterialFormComponentConstant.WIDGET_SELECTOR,
-            (final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+            (final dom.HtmlElement element,final ioc.Container iocContainer)
                 => new MaterialFormComponent.fromElement(element,iocContainer)
     );
     

@@ -32,7 +32,7 @@ class TimeFrameDialog extends MaterialDialog {
     /// den Dialog beenden und kehrt zu seinem vorhergehenden Login zurück
     /// [undoPossible] wird eingeschaltet wenn der User eingeloggt ist
     TimeFrameDialog({final bool undoPossible: false })
-        : _store = ioc.IOCContainer().resolve(modelService.SimpleValueStore).as<SimpleValueStore>(),
+        : _store = ioc.Container().resolve(modelService.SimpleValueStore).as<SimpleValueStore>(),
             super(new DialogConfig(
                 closeOnBackDropClick: undoPossible,
                 acceptEscToClose: undoPossible

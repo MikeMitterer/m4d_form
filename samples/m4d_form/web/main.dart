@@ -5,7 +5,6 @@ import 'package:console_log_handler/console_log_handler.dart';
 
 // For Date- and TimePicker
 import 'package:l10n/l10n.dart';
-import 'package:intl/intl.dart';
 import 'package:intl/intl_browser.dart';
 import 'package:m4d_form_sample/_l10n/messages_all.dart';
 
@@ -68,7 +67,7 @@ main() async {
     (dom.querySelector("head") as dom.HeadElement).lang = locale;
 
     // Initialize M4D
-    ioc.IOCContainer.bindModules([
+    ioc.Container.bindModules([
         DialogModule(), FormModule(), CoreComponentsModule()
     ]).bind(coreService.Application).to(Application());
 

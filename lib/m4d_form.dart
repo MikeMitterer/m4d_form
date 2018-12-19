@@ -42,7 +42,7 @@ void registerMdlFormComponents() {
     registerMaterialFormComponent();
 }
 
-class FormModule extends ioc.IOCModule {
+class FormModule extends ioc.Module {
 
     @override
     configure() {
@@ -53,7 +53,7 @@ class FormModule extends ioc.IOCModule {
     }
 
     @override
-    List<ioc.IOCModule> get dependsOn => [
+    List<ioc.Module> get dependsOn => [
         CoreComponentsModule(),
         TranslationModule(),
         DirectivesModule()
