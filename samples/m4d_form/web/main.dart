@@ -17,7 +17,7 @@ import "package:m4d_form/m4d_form.dart";
 import 'package:m4d_form_sample/dialog.dart';
 
 class Application extends MaterialApplication {
-    final Logger _logger = new Logger('form_sample.Application');
+    // final Logger _logger = new Logger('form_sample.Application');
 
     @override run() {
         Future(() {
